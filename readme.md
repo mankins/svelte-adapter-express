@@ -4,7 +4,7 @@ Svelte Kit adapter that provides an example express server.
 
 ## Quickstart
 
-To get a simple express server with compression, static files, and SvelteKit rendering:
+To get a simple node express server with compression, static files, and SvelteKit rendering:
 
 ```
 npm i -D svelte-adapter-express
@@ -34,13 +34,13 @@ Which will generate `./build/index.js` which can be run:
 PORT=3000 node ./build/index.js
 ```
 
-## Custom server
+## Custom Server
 
 To run a customized server, start by copying the default server from the module:
 
 ```
 mkdir -p adapter/express
-cp node_modules/mankins/adapter-express/files/server.js adapter/express
+cp node_modules/adapter-express/files/server.js adapter/express
 ```
 
 Edit the `server.js` to meet your needs.
@@ -55,9 +55,9 @@ const expressAdapter = require("svelte-adapter-express");
 
 module.exports = {
   kit: {
-      		adapter: expressAdapter(
-			{serverFile: path.join(__dirname, './adapter/express/server.js')}
-		),
+      	adapter: expressAdapter({
+            serverFile: path.join(__dirname, './adapter/express/server.js')
+        }),
   },
 };
 ```
