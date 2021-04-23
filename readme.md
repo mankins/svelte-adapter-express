@@ -40,7 +40,7 @@ To run a customized server, start by copying the default server from the module:
 
 ```
 mkdir -p adapter/express
-cp node_modules/adapter-express/files/server.js adapter/express
+cp node_modules/svelte-adapter-express/files/server.js adapter/express
 ```
 
 Edit the `server.js` to meet your needs.
