@@ -1,5 +1,4 @@
 {
-  "bundleDependencies": false,
   "deprecated": false,
   "description": "Adapter for Svelte apps that builds an Express server.",
   "devDependencies": {},
@@ -22,5 +21,15 @@
   "dependencies": {
     "compression": "^1.7.4",
     "express": "^4.17.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mankins/svelte-adapter-express.git"
+  },
+  "author": "Matt Mankins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mankins/svelte-adapter-express/issues"
+  },
+  "homepage": "https://github.com/mankins/svelte-adapter-express#readme"
 }
