@@ -15,7 +15,9 @@
   ],
   "main": "index.cjs",
   "name": "@mankins/svelte-adapter-express",
-  "scripts": {},
+  "scripts": {
+    "npm": "np"
+  },
   "type": "module",
   "version": "0.0.1",
   "dependencies": {
