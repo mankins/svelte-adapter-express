@@ -13,13 +13,13 @@
     "adapter",
     "express"
   ],
-  "main": "index.cjs",
+  "main": "index.js",
   "name": "@mankins/svelte-adapter-express",
   "scripts": {
     "npm": "np"
   },
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "dependencies": {
     "compression": "^1.7.4",
     "express": "^4.17.1"
