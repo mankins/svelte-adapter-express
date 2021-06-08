@@ -14,7 +14,7 @@ export default function ({ out = 'build', assets = 'assets', serverFile = `${__d
 	const adapter = {
 		name: '@mankins/svelte-adapter-express',
 
-		async adapt({utils, config}) {
+		async adapt({utils}) {
 			utils.log.minor(`Copying assets to ${assets}`);
 			const static_directory = join(out, assets);
 			utils.copy_client_files(static_directory);
