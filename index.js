@@ -1,17 +1,20 @@
-const { copyFileSync } = require('fs');
-const { join } = require('path');
+import { copyFileSync } from 'fs';
+import { dirname, join } from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 /**
  * @param {{
  *   out?: string;
  * }} options
  */
-module.exports = function ({ out = 'build', assets = 'assets', serverFile = `${__dirname}/files/server.js` } = {}) {
+export default function ({ out = 'build', assets = 'assets', serverFile = `${__dirname}/files/server.js` } = {}) {
 	/** @type {import('@sveltejs/kit').Adapter} */
 	const adapter = {
 		name: '@mankins/svelte-adapter-express',
 
-		async adapt(utils) {
+		async adapt({utils}) {
 			utils.log.minor(`Copying assets to ${assets}`);
 			const static_directory = join(out, assets);
 			utils.copy_client_files(static_directory);
