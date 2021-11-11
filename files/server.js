@@ -1,6 +1,9 @@
 import path from "path";
 import { fileURLToPath, URL, URLSearchParams } from "url";
 import { get_body as getBody } from "@sveltejs/app-utils/http"; // eslint-disable-line node/file-extension-in-import
+import { fetch, Response, Request, Headers } from "@sveltejs/kit/install-fetch";
+import { render, init } from "./app.js";
+
 
 import express from "express";
 import compression from "compression";
@@ -14,11 +17,17 @@ const {
   PRERENDERED = path.join(__dirname, "prerendered"),
 } = process.env;
 
+// shim fetch for node
+global.fetch = fetch;
+global.Response = Response;
+global.Request = Request;
+global.Headers = Headers;
+
+init();
+
 const svelteKit = async (request, response) => {
   const host = `${request.headers["x-forwarded-proto"]}://${request.headers.host}`;
   const { pathname, query = "" } = new URL(request.url || "", host);
-
-  const { render } = await import("./app.js");
 
   const rendered = await render({
     host,
