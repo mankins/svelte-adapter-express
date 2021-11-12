@@ -1,5 +1,9 @@
 # @mankins/svelte-adapter-express
 
+## 0.0.6
+
+- add svelte fetch support
+
 ## 0.0.5
 
 - same as 0.0.4, still learning `np` tool
