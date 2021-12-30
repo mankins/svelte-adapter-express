@@ -47,11 +47,12 @@ Edit the `server.js` to meet your needs.
 
 Then at build time refer to this custom server:
 
-When configuring the adapter in `svelte.config.cjs`, add a `serverFile` parameter:
+When configuring the adapter in `svelte.config.js`, add a `serverFile` parameter:
 
 ```
-const path = require('path');
-const expressAdapter = require("@mankins/svelte-adapter-express");
+import path from 'path';
+const __dirname = path.resolve();
+import expressAdapter from '@mankins/svelte-adapter-express';
 
 module.exports = {
   kit: {
