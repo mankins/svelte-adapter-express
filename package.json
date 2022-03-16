@@ -1,7 +1,6 @@
 {
   "deprecated": false,
   "description": "Adapter for Svelte apps that builds an Express server.",
-  "devDependencies": {},
   "files": [
     "files"
   ],
@@ -22,7 +21,7 @@
   "version": "0.0.6",
   "dependencies": {
     "compression": "^1.7.4",
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   },
   "repository": {
     "type": "git",
