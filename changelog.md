@@ -1,5 +1,10 @@
 # @mankins/svelte-adapter-express
 
+## 0.1.0
+
+- update to match svelte@next (@Bowedyapper) [mankins/svelte-adapter-express#7]
+- update dependency (express -> 4.17.3)
+
 ## 0.0.6
 
 - add svelte fetch support
