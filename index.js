@@ -30,9 +30,7 @@ export default function({
       copyFileSync(serverFile, `${out}/index.js`);
 
       builder.log.minor('Prerendering static pages');
-      await builder.writePrerendered({
-        dest: `${out}/prerendered`
-      });
+      await builder.writePrerendered(`${out}/prerendered`);
     }
   };
 
