@@ -1,5 +1,9 @@
 # @mankins/svelte-adapter-express
 
+## 0.1.1
+
+- Fix "str.replace is not a function" (@lietu) [mankins/svelte-adapter-express#8]
+
 ## 0.1.0
 
 - update to match svelte@next (@Bowedyapper) [mankins/svelte-adapter-express#7]
