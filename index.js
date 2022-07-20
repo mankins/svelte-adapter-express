@@ -22,7 +22,6 @@ export default function({
       builder.log.minor(`Copying assets to ${assets}`);
       const static_directory = join(out, assets);
       builder.writeClient(static_directory);
-      builder.writeStatic(static_directory);
 
       builder.log.minor('Copying server');
       builder.writeServer(out);
