@@ -1,5 +1,9 @@
 # @mankins/svelte-adapter-express
 
+## 0.1.2
+
+- Sveltekit breaking: writeStatic has been removed (@nelreina) [mankins/svelte-adapter-express#11]
+
 ## 0.1.1
 
 - Fix "str.replace is not a function" (@lietu) [mankins/svelte-adapter-express#8]
